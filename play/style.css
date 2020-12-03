@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.container {
+  
+    padding-left: 8%;
+    padding-right: 8%;
+    overflow: hidden;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+.menu-bar {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+    font-size: 25px;
+}
+nav {
+    flex: 1;
+    text-align: right;
+}
+ul {
+    overflow: hidden;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+nav ul li a:hover {
+    color: #006FCD;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+.col-1 h2 {
+    font-size: 58px;
+}
+.col-1 h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.col-1 p {
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+.col-1 h4 {
+    font-size: 20px;
+    margin: 30px 0;
+}
+#order-button {
+    width: 140px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 12px 10px;
+    background-color: blue;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+button:hover {
+    background-color: cornflowerblue;
+}
+button img {
+    width: 30px;
+    display: none;
+}
+button:hover img{
+    display: block;
+}
+button:hover {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.col-2 {
+    flex-basis: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.col-2 .controller  {
+    width: 90%;
+
+}
+.color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #006FCD;
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(150px);
+}
+.car {
+    margin: 20px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=submit] {
+    background-color: #006FCD;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+.car {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+} 
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+.map:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+@media only screen and (max-width:700px) {
+    .menu-bar {
+        display: block;
+    }
+    nav ul {
+        width: 100%;
+        position: fixed;
+        background: #2f3640;
+        overflow: hidden;
+        height: 100vh;
+        top: 80px;
+        text-align: center;
+        left: -100%;
+        z-index: 1;
+        transition: all .5s;
+        
+    }
+    nav ul li {
+        display: block;
+        line-height: 30px;
+        margin: 50px 0;
+    }
+    nav ul li a {
+        color: #fff;
+        font-size: 20px;
+
+    }
+    .col-1 {
+        margin-left: 25px;
+    }
+    nav ul.show{
+        left: 0;
+    }
+    .row {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .col-2 .controller {
+        width: 80%;
+    }
+    .color-box {
+        transform: translateX(75px);
+    }
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+
+      
+}
